@@ -20,6 +20,7 @@
 		18E894381BD4BCEF00AA460A /* CAXException.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 18E894341BD4BCEF00AA460A /* CAXException.cpp */; settings = {ASSET_TAGS = (); }; };
 		18E8943A1BD4BEF900AA460A /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E894391BD4BEF900AA460A /* AudioToolbox.framework */; };
 		18E8943C1BD4C8F400AA460A /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 18E8943B1BD4C8F400AA460A /* AVFoundation.framework */; };
+		18E8943E1BD4D38100AA460A /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 18E8943D1BD4D38100AA460A /* LICENSE */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +47,7 @@
 		18E894351BD4BCEF00AA460A /* CAXException.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CAXException.h; sourceTree = "<group>"; };
 		18E894391BD4BEF900AA460A /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		18E8943B1BD4C8F400AA460A /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		18E8943D1BD4D38100AA460A /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 				18E8941A1BD4B92B00AA460A /* LaunchScreen.storyboard */,
 				18E8941D1BD4B92B00AA460A /* Info.plist */,
 				18E8940C1BD4B92B00AA460A /* Supporting Files */,
+				18E8943D1BD4D38100AA460A /* LICENSE */,
 			);
 			path = AudioVolumeIndicator;
 			sourceTree = "<group>";
@@ -197,6 +200,7 @@
 			files = (
 				18E8941C1BD4B92B00AA460A /* LaunchScreen.storyboard in Resources */,
 				18E894191BD4B92B00AA460A /* Assets.xcassets in Resources */,
+				18E8943E1BD4D38100AA460A /* LICENSE in Resources */,
 				18E894171BD4B92B00AA460A /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
