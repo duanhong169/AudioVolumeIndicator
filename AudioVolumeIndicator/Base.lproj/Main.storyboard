@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15B30a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Yiu-1e-4cf">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="pbd-GD-uYb">
+            <objects>
+                <navigationController id="Yiu-1e-4cf" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="FdX-Zr-a6I">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="VzL-BR-P6S" kind="relationship" relationship="rootViewController" id="szh-lt-GE3"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V5F-7I-ALJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-887" y="65"/>
+        </scene>
+        <!--Volume Indicator-->
+        <scene sceneID="cLo-hM-1m3">
+            <objects>
+                <viewController id="VzL-BR-P6S" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="tCb-jc-r4Z"/>
+                        <viewControllerLayoutGuide type="bottom" id="ADP-Ij-wLV"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="WZn-By-Sl6">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dok-gP-d3R" customClass="DHAudioQueueVolumeIndicator">
+                                <rect key="frame" x="0.0" y="216" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="dok-gP-d3R" secondAttribute="height" multiplier="1:1" id="DTc-Mm-63E"/>
+                                    <constraint firstAttribute="width" constant="600" id="gET-9Q-1qn"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" showsTouchWhenHighlighted="YES" adjustsImageWhenHighlighted="NO" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYS-Jc-qqb">
+                                <rect key="frame" x="264" y="480" width="72" height="72"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="0.49803921569999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="cYS-Jc-qqb" secondAttribute="height" multiplier="1:1" id="UiN-5X-5n2"/>
+                                    <constraint firstAttribute="height" constant="72" id="VGD-uj-yOf"/>
+                                </constraints>
+                                <state key="normal" image="VoiceButton"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="36"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="cancel:" destination="VzL-BR-P6S" eventType="touchUpInside" id="8Ch-XF-biS"/>
+                                    <action selector="finish:" destination="VzL-BR-P6S" eventType="touchUpInside" id="PfE-NN-UcE"/>
+                                    <action selector="start:" destination="VzL-BR-P6S" eventType="touchDown" id="M9e-4D-yZw"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="cYS-Jc-qqb" firstAttribute="centerY" secondItem="dok-gP-d3R" secondAttribute="centerY" id="8Sw-vT-KIb"/>
+                            <constraint firstItem="ADP-Ij-wLV" firstAttribute="top" secondItem="cYS-Jc-qqb" secondAttribute="bottom" constant="48" id="Lp3-6a-3Yh"/>
+                            <constraint firstItem="cYS-Jc-qqb" firstAttribute="centerX" secondItem="dok-gP-d3R" secondAttribute="centerX" id="o5E-47-nWH"/>
+                            <constraint firstItem="cYS-Jc-qqb" firstAttribute="centerX" secondItem="WZn-By-Sl6" secondAttribute="centerX" id="qLC-c4-TQ5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Volume Indicator" id="P6C-hs-Ssk"/>
+                    <connections>
+                        <outlet property="volumeIndicator" destination="dok-gP-d3R" id="AfW-3A-5hm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CE0-Ar-wr5" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-225" y="65"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="VoiceButton" width="25" height="25"/>
+    </resources>
+</document>
