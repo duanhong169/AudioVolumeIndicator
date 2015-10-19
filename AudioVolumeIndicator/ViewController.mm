@@ -41,10 +41,10 @@
         dispatch_semaphore_wait(waitMicrophonePermission, DISPATCH_TIME_FOREVER);
     }
     if (!hasMicrophonePermission) {
-        UIAlertView *toast = [[UIAlertView alloc] initWithTitle:@"发生错误"
-                                                        message:@"没有麦克风权限，请到“设置”->“隐私”->“麦克风”中开启"
+        UIAlertView *toast = [[UIAlertView alloc] initWithTitle:@"Error"
+                                                        message:@"No microphone permission, please check Settings -> Privacy -> Microphone"
                                                        delegate:self
-                                              cancelButtonTitle:@"确认"
+                                              cancelButtonTitle:@"OK"
                                               otherButtonTitles:nil, nil];
         [toast show];
     }
