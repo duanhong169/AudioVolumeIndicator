@@ -3,7 +3,7 @@ Audio Volume Indicator for iOS AudioQueue.
 
 #### Screenshots
 
-![AudioVolumeIndicator](https://dl.dropboxusercontent.com/u/33976091/AudioVolumeIndicator.gif)
+![AudioVolumeIndicator](art/AudioVolumeIndicator.gif)
 
 ### Usage
 
